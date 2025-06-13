@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- bootstrap -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <!-- bootstrapのdropdownアニメーション用js -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- swiperjs -->
+ <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- font-awsome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css" />
+<!-- jQuary -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<title>Document</title>
+</head>
+
+<style>
+ header{
+  background-color: lightgray;
+ }
+ #menu-btn{
+  background-color: lightgray;
+ }
+
+ #header-menu p{
+  padding: 10px 10px;
+ }
+
+ .full-image-size{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+ }
+
+#covid-info{
+ background-color: #ffefd5;
+ /* padding: 0 150px; */
+}
+.dropdown-title{
+ background-color: #FFC7AF;
+  padding: 10px;
+}
+#food-intro{
+ background-color: #ffefd5;
+}
+
+#shop-info{
+ background-color: #ffefd5;
+ color: white;
+}
+#shops{
+ background-color: #ffefd5;
+}
+footer{
+ background-color: darkgray;
+ padding: 50px;
+}
+footer p{
+ padding: 10px;
+}
+
+.fadeIn{
+ /* display: none; */
+ opacity: 0;
+ transition: opacity 1s;
+}
+
+
+
+/* スマホの場合、商品紹介の文章サイズを変える */
+@media(max-width: 576px){
+ .food-description{
+  font-size: 20px;
+ }
+}
+
+</style>
+
+<body>
+
+ <header>
+  <header>
+   <nav class="navbar navbar-expand-lg navbar-light bg-gray">
+     <a class="navbar-brand" href="#">Casteria</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+ 
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item active">
+           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" style="color: black;" href="#">Food</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" style="color: black;" href="#">Drink</a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link" style="color: black;" href="#">お問い合わせ</a>
+       </li>
+        
+       </ul>
+ 
+       <form class="form-inline my-2 my-lg-0 ml-3">
+         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+         <button class="btn my-2 my-sm-0" type="submit">Search</button>
+       </form>
+     </div>
+   </nav>
+ </header>
+ 
+ </header>
+
+
+<section id="swiper">
+
+
+
+<!----------------- slider pc ----------------------->
+<!-- Slider main container -->
+<div class="swiper swiper-pc d-none d-md-block">
+ <!-- Additional required wrapper -->
+ <div class="swiper-wrapper">
+   <div class="swiper-slide">
+    <div class="container-fluid p-0">
+     <div class="row no-gutters">
+       <div class="col-md-6">
+        <img src="img/restaurant3.jpg" alt="" class="full-image-size">
+       </div>
+       <div class="col-md-6">
+        <img src="img/food2.jpg" alt="" class="full-image-size">
+       </div>
+     </div>
+    </div>
+   </div>
+
+   <div class="swiper-slide">
+    <div class="container-fluid p-0">
+     <div class="row no-gutters">
+       <div class="col-md-6">
+        <img src="img/restaurant.jpg" alt="" class="full-image-size">
+       </div>
+       <div class="col-md-6">
+        <img src="img/food3.jpg" alt="" class="full-image-size">
+       </div>
+     </div>
+    </div>
+   </div>
+
+   <div class="swiper-slide">
+    <div class="container-fluid p-0">
+     <div class="row no-gutters">
+       <div class="col-md-6">
+        <img src="img/restaurant4.jpg" alt="" class="full-image-size">
+       </div>
+       <div class="col-md-6">
+        <img src="img/food4.jpg" alt="" class="full-image-size">
+       </div>
+     </div>
+    </div>
+   </div>
+ 
+ </div>
+
+  <!-- If we need pagination -->
+  <!-- <div class="swiper-pagination-pc"></div> -->
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev-pc"></div>
+  <div class="swiper-button-next-pc"></div>
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar-pc"></div>
+ 
+</div>
+ <!----------------- slider sp ----------------------->
+<!-- Slider main container -->
+<div class="swiper swiper-sp d-block d-md-none">
+ <!-- Additional required wrapper -->
+ <div class="swiper-wrapper">
+   <div class="swiper-slide">
+    <div class="container-fluid p-0">
+     <div class="row no-gutters">
+       <div class="col-md-12">
+        <img src="img/food.jpg" alt="" class="full-image-size">
+       </div>
+     </div>
+    </div>
+   </div>
+
+   <div class="swiper-slide">
+    <div class="container-fluid p-0">
+     <div class="row no-gutters">
+       <div class="col-md-12">
+        <img src="img/restaurant.jpg" alt="" class="full-image-size">
+       </div>
+     </div>
+    </div>
+   </div>
+
+   <div class="swiper-slide">
+    <div class="container-fluid p-0">
+     <div class="row no-gutters">
+       <div class="col-md-12">
+        <img src="img/restaurant4.jpg" alt="" class="full-image-size">
+       </div>
+     </div>
+    </div>
+   </div>
+ 
+ </div>
+
+ <!-- If we need pagination -->
+ <!-- <div class="swiper-pagination-sp"></div> -->
+ <!-- If we need navigation buttons -->
+ <div class="swiper-button-prev-sp"></div>
+ <div class="swiper-button-next-sp"></div>
+ <!-- If we need scrollbar -->
+ <div class="swiper-scrollbar-sp"></div>
+
+
+
+</div>
+</section>
+
+<section id="covid-info">
+ <div class="container">
+  <div class="row">
+
+   <div class="col-md-10 text-left">
+    <h2>新型コロナウイルスに対する取り組みの最新情報をご案内</h2>
+   </div>
+    
+  
+
+   <div class="col-md-10 dropdown">
+   <div class="dropdown-title"><h3 class="text-left">⬛️ 衛生面に関して</h3></div>
+   <ul class="dropdown-lists" style="display: none;">
+    <li class="pb-3">マスクを着用しての接客</li>
+    <li class="pb-3">出勤前の検温の徹底</li>
+    <li class="pb-3">レジカウンターやドリンクの受け渡し口等への飛沫防止ガードの設置</li>
+    <li class="pb-3">より頻度の高い手洗いの励行</li>
+    <li class="pb-3">テーブルにお客様用の消毒用アルコールの設置</li>
+    <li class="pb-3">従業員間の距離確保のため、休憩や研修時の客席利用</li>
+   </ul>
+   </div>
+
+   <div class="col-md-10 dropdown">
+    <div class="dropdown-title"><h3 class="text-left">⬛️ お客様へのご協力のお願い</h3></div>
+    <ul class="dropdown-lists" style="display: none;">
+     <li class="pb-3">店内では、飲食時以外のマスク着用をお願いいたします</li>
+     <li class="pb-3">入店時の手指の消毒にご協力ください</li>
+     <li class="pb-3">レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください</li>
+     <li class="pb-3">多数でお越しの際は、お一人がまとめてご注文願います(混雑時に入場制限をする場合がございます)</li>
+     <li class="pb-3">発熱や体調不調の際はご入店をお控え下さい</li>
+    </ul>
+    </div>
+
+    <div class="col-md-10 dropdown">
+     <div class="dropdown-title"><h3 class="text-left">⬛️ サービスに関して</h3></div>
+     <ul class="dropdown-lists" style="display: none;">
+      <li class="pb-3">直接お渡しする商品の提供、金銭受取時にグローブの着用</li>
+      <li class="pb-3">ドリンクやフードサンプリング中止</li>
+      <li class="pb-3">地域活動・イベントの中止</li>
+      <li class="pb-3">混雑時間帯の客席の譲り合いへのご協力お願いの実施</li>
+      <li class="pb-3">店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</li>
+      <li class="pb-3">混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</li>
+     </ul>
+     </div>
+  </div>
+ 
+  </div>
+ </section>
+
+
+ <section id="food-intro">
+
+  <div id="signature-food" class="pt-5 fadeIn">
+   <div class="container">
+    <h3 class="p-2">signature food</h3>
+    <div class="row">
+
+     <div class="col-md-6">
+      <img src="img/food.jpg" alt="" class="img-fluid full-image-size">
+     </div>
+
+     <div class="col-md-6 p-4 food-description">
+      <p>サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。サーモンの美味しさを引き立てる2種類のソースも絶品です。</p>
+     </div>
+    </div>
+   </div> 
+  </div>
+
+  <div id="our-coffee" class="pt-5 fadeIn">
+   <div class="container">
+    <h3 class="p-2">Our Coffee</h3>
+    <div class="row">
+
+     <div class="col-md-6">
+      <img src="img/barista.jpg" alt="" class="img-fluid">
+     </div>
+
+     <div class="col-md-6 p-4 food-description">
+      <p>当店のコーヒー豆は厳選して世界中から買い付けています。そして、そのコーヒー豆のおいしさを最大限に引き出すために自社のロースタリーで焙煎しています。</p>
+     </div>
+    </div>
+   </div> 
+  </div>
+
+  <div id="our-food" class="pt-5 fadeIn">
+   <div class="container">
+    <h3 class="p-2">Our Food</h3>
+    <div class="row">
+
+     <div class="col-md-6">
+      <img src="img/food3.jpg" alt="" class="img-fluid">
+     </div>
+
+     <div class="col-md-6 p-4 food-description">
+      <p>当店は何よりもまずは衛生管理に気をつけています。「安全・安心」をお届けするために日々継続的な努力を惜しみません。</p>
+     </div>
+    </div>
+   </div> 
+  </div>
+
+ </section>
+
+ <!-- スペースも背景色で埋めるため -->
+ <div class="p-5" style="background-color: #ffefd5;"></div>
+
+
+ <section id="shop-info" class="fadeIn">
+  <div class="container">
+   <div class="row p-5" style="background-color: black;">
+    <div class="col-md-6">
+     <h3>Address</h3>
+     <p>661xxxx Drive, xxxxxxxxxx01 0600000000</p>
+     <p>Opening Hours</p>
+     <h3>Monday - Friday: 10am - 9pm</h3>
+     <p>Sunday, Sunday & Public Holidays: 9am-9pm</p>
+    </div>
+    <div class="col-md-6">
+     <img src="img/barista.jpg" alt="" class="img-fluid">
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section id="shops" class="d-none d-lg-block fadeIn">
+  <div class="container">
+   
+    <h4 class="text-center p-3">店舗一覧</h4>
+
+   <div class="row justify-content-center pl-5">
+   <div class="col-md-3">
+    <img src="img/restaurant2.jpg" alt="" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+    <p><i class="fa-solid fa-location-dot"></i>東京都渋谷区xxxxxxxxx</p>
+   </div>
+
+   <div class="col-md-3">
+    <img src="img/restaurant.jpg" alt="" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+    <p><i class="fa-solid fa-location-dot"></i>千葉県松戸市xxxxxxxxx</p>
+   </div>
+
+   <div class="col-md-3">
+    <img src="img/restaurant4.jpg" alt="" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+    <p><i class="fa-solid fa-location-dot"></i>神奈川県横浜市xxxxxxxxx</p>
+   </div>
+
+   <div class="col-md-3">
+    <img src="img/restaurant5.jpg" alt="" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+    <p><i class="fa-solid fa-location-dot"></i>埼玉県川越市xxxxxxxxx</p>
+   </div>
+  </div>
+   
+  
+  </div>
+ </section>
+
+
+
+ <footer class="fadeIn">
+  <div class="container d-flex justify-content-center">
+   <p>プライバシーポリシー</p>
+   <p>お問い合わせ</p>
+   <p>運営会社</p>
+  </div>
+ </footer>
+
+
+
+</body>
+</html>
+
+
+<script>
+   $(document).ready(function () {
+    $('.dropdown-title').click(function () {
+      $(this).next('.dropdown-lists').slideToggle(300); // 300msで開閉
+    });
+  });
+
+
+///////////////pc///////////////////////////////
+ //swiperの初期化(https://swiperjs.com/get-started)
+ const swiper = new Swiper('.swiper-pc', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  //自動でswipe(https://swiperjs.com/types/interfaces/types_modules_autoplay.AutoplayOptions)
+  autoplay:{
+   delay: 1000,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+///////////////sp/////////////////////////////
+ //swiperの初期化(https://swiperjs.com/get-started)
+ const swiperPc = new Swiper('.swiper-sp', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  //自動でswipe(https://swiperjs.com/types/interfaces/types_modules_autoplay.AutoplayOptions)
+  autoplay:{
+   delay: 1000,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination-pc',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next-pc',
+    prevEl: '.swiper-button-prev-pc',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar-pc',
+  },
+});
+
+
+ //swiperの初期化(https://swiperjs.com/get-started)
+ const swiperSp = new Swiper('.swiper-sp', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  //自動でswipe(https://swiperjs.com/types/interfaces/types_modules_autoplay.AutoplayOptions)
+  autoplay:{
+   delay: 1000,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination-sp',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next-sp',
+    prevEl: '.swiper-button-prev-sp',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar-sp',
+  },
+});
+
+$(document).ready(function () {
+  // scrollもしくはload(全ページがロードされた時)をしている時に実行される。
+  //どちらも表記しておくと、画面の最初に要素が存在している場合、スクロールした時に表示される場合、どちらにも対応できる。
+  $(window).on('scroll load', function () {
+    $('#signature-food, #our-coffee, #our-food, #shop-info, #shops, footer').each(function () {
+     //this(現在の要素、イベントの対象の.fade-target)が画面上からどれくらい離れているか。
+      var elementTop = $(this).offset().top;
+      //今までスクロールした一番下の位置
+      var scrollBottom = $(window).scrollTop() + $(window).height();
+      //(.fade-targetの位置 + 50px)を通過したら。一番画面下のpxが.fade-targetの位置を超えたら。
+      if (scrollBottom > elementTop + 5) { // 少し余裕を持って+50
+        $(this).fadeTo(300, 1); // 600の時間をかけて透明度を1に。
+      }
+    });
+  });
+});
+
+
+</script>
+
+
+
+
